@@ -1,1 +1,6 @@
 joblib
+numpy
+pandas
+streamlit
+Pillow
+scikit-learn
