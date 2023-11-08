@@ -2,14 +2,17 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
+#import joblib
 def Algeria_app():
     st.header("Algerian Forest Fires - Prediction")
     st.write("https://www.kaggle.com/datasets/nitinchoudhary012/algerian-forest-fires-dataset/data")
     st.markdown('---')
     st.write('#### Why is it so important to predict fires in African forests through data?')
     st.write('Predicting fires in African forests, like Algerian Forest, through data-driven methods is crucial to safeguard biodiversity, mitigate climate change, protect human livelihoods, and ensure the well-being of local communities. Data-driven predictions enable early intervention and efficient resource allocation for fire management, reducing the devastating impacts of wildfires and their far-reaching consequences, both regionally and globally.')
-    model_fire = joblib.load('Algeria_fire_forest.pkl')
+    #model_fire = joblib.load('Algeria_fire_forest.pkl')
+    with open('Algeria_fire_forest.pkl', 'rb') as file:
+        model_fire = pickle.load(file)
+
     st.write('#### About the dataset: Features')
     st.write('**Fine_Fuel_Moisture_Code**, is the moisture of the dead fine fuel. These fuels are found in the surface layer of the soil.')
     st.write('**Duff_Moisture_Code**, is the humidity of the mulch (Upper layer of soil formed mainly by decomposing organic matter.) It predicts how fuels located in the middle layer of the mulch burn.')
