@@ -2,7 +2,7 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
-#import joblib
+import joblib
 def Algeria_app():
     st.header("Algerian Forest Fires - Prediction")
     st.write("https://www.kaggle.com/datasets/nitinchoudhary012/algerian-forest-fires-dataset/data")
@@ -52,9 +52,8 @@ def Algeria_app():
 
         df_fire = pd.DataFrame.from_dict([data_fire])
 
-        #scaler_fire = joblib.load('scaler.pkl')
-        with open('scaler.pkl', 'rb') as file:
-            scaler_fire = pickle.load(file)
+        scaler_fire = joblib.load('scaler.pkl')
+
         data_fire = scaler_fire.transform(df_fire)
 
 
