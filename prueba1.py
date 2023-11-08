@@ -10,7 +10,7 @@ def Algeria_app():
     st.write('#### Why is it so important to predict fires in African forests through data?')
     st.write('Predicting fires in African forests, like Algerian Forest, through data-driven methods is crucial to safeguard biodiversity, mitigate climate change, protect human livelihoods, and ensure the well-being of local communities. Data-driven predictions enable early intervention and efficient resource allocation for fire management, reducing the devastating impacts of wildfires and their far-reaching consequences, both regionally and globally.')
     #model_fire = joblib.load('Algeria_fire_forest.pkl')
-    with open('Algeria_fire_forest.pkl', 'rb') as file:
+    with open('algeria.pkl', 'rb') as file:
         model_fire = pickle.load(file)
 
     st.write('#### About the dataset: Features')
