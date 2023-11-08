@@ -13,7 +13,7 @@ def Animal_app():
     st.write('Predicting the image of an African wild animal is important for wildlife conservation, ecological research, and education. It helps in monitoring and protecting endangered species, understanding ecosystems, and raising awareness about African wildlife.')
 
     # Cargar el modelo previamente entrenado desde un archivo pickle
-    data_afric = joblib.load('data_afric.pkl')
+    data_afric = joblib.load('afric.pkl')
 
     # Agregar la opción para que el usuario cargue una imagen
     uploaded_image = st.file_uploader("Submit Image", type=["jpg", "jpeg", "png"])
