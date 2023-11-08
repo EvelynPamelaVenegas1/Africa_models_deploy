@@ -52,7 +52,7 @@ def Algeria_app():
 
         df_fire = pd.DataFrame.from_dict([data_fire])
 
-        scaler_fire = joblib.load('scaler_fire.pkl')
+        scaler_fire = joblib.load('scaler.pkl')
         data_fire = scaler_fire.transform(df_fire)
 
 
